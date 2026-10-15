@@ -2,14 +2,43 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Depel's Food Enterprise | Quality Food Products in Nigeria",
+  metadataBase: new URL("https://depelsfood.com"),
+  title: {
+    default: "Depel's Food Enterprise | Quality Food Products in Nigeria",
+    template: "%s | Depel's Food Enterprise",
+  },
   description:
-    "Discover quality food products from Depel's Food Enterprise, including nutritious pap, beans, natural honey, dates, soya and more. Quality food for homes, families and businesses.",
+    "Explore Depel's Food Enterprise products including Mix Grain Pap, Baby Special Pap, Beans Powder, Natural Honey and Soya Mix Powder. Quality food for homes, families and businesses in Nigeria.",
+  applicationName: "Depel's Food Enterprise",
+  keywords: [
+    "Depel's Food Enterprise",
+    "Mix Grain Pap",
+    "Baby Special Pap",
+    "Beans Powder",
+    "Natural Honey",
+    "Soya Mix Powder",
+    "Nigerian food products",
+    "food wholesale Nigeria",
+    "food supply Osun State",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    siteName: "Depel's Food Enterprise",
+    title: "Good Food Gives More | Depel's Food Enterprise",
+    description:
+      "Quality food products for everyday meals, families and growing businesses.",
+    url: "https://depelsfood.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en-NG">
       <body>{children}</body>
     </html>
   );
