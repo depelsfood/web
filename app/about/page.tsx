@@ -1,0 +1,15 @@
+import type { Metadata } from "next";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+
+export const metadata: Metadata = { title: "About Us", description: "Learn about Depel's Food Enterprise, a Nigerian food business bringing quality food products to homes, families and businesses." };
+
+const values = [
+  ["Care in every choice", "We believe everyday food deserves attention, thoughtfulness and care from selection through to the customer."],
+  ["Useful products", "Our growing range serves different moments—from nourishing pap at breakfast to beans and soya for everyday cooking."],
+  ["Dependable relationships", "We aim to build lasting relationships with households, retailers and businesses through clear communication and reliable service."],
+];
+
+export default function AboutPage() {
+  return <main><section className="bg-[var(--green-dark)] pb-20 pt-36 text-white"><SiteHeader /><div className="container"><p className="text-xs font-bold uppercase tracking-[.2em] text-[var(--gold)]">About Depel&apos;s</p><h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl">Food that fits real life.</h1><p className="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">Depel&apos;s Food Enterprise is a Nigerian food business growing a range of products for everyday meals, family kitchens and business needs.</p><a href="/products" className="mt-8 inline-flex rounded-full bg-[var(--gold)] px-6 py-3.5 text-sm font-bold text-white">Explore Our Products →</a></div></section><section className="bg-white py-20"><div className="container grid gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p className="text-xs font-bold uppercase tracking-[.2em] text-[var(--gold)]">Our approach</p><h2 className="mt-3 text-3xl font-extrabold leading-tight text-[var(--green-dark)] sm:text-4xl">More than a single product. More possibilities for the table.</h2></div><div><p className="text-base leading-8 text-black/65">From Mix Grain Pap and Baby Special Pap to Beans Powder, Natural Honey and Soya Mix Powder, we are building a product range that meets different needs across the home and food business. Our goal is to make it easier for customers to discover products, choose what they need and connect with us for orders and supply enquiries.</p><p className="mt-5 text-base leading-8 text-black/65">We are committed to growing through customer trust, clear communication and a practical understanding of how food is used in everyday life.</p></div></div></section><section className="bg-[var(--cream)] py-20"><div className="container"><h2 className="text-center text-3xl font-extrabold text-[var(--green-dark)]">What guides us</h2><div className="mt-10 grid gap-5 md:grid-cols-3">{values.map(([title,body])=><article key={title} className="rounded-3xl border border-black/5 bg-white p-7"><h3 className="text-lg font-extrabold text-[var(--green-dark)]">{title}</h3><p className="mt-3 text-sm leading-7 text-black/60">{body}</p></article>)}</div></div></section><SiteFooter /></main>;
+}
