@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     "Explore Depel's Food Enterprise products including Mix Grain Pap, Baby Special Pap, Beans Powder, Natural Honey and Soya Mix Powder. Quality food for homes, families and businesses in Nigeria.",
   applicationName: "Depel's Food Enterprise",
   icons: {
-    icon: "/images/brand/depels-food-logo.svg",
-    shortcut: "/images/brand/depels-food-logo.svg",
-    apple: "/images/brand/depels-food-logo.svg",
+    icon: "/images/logo/Depels_Food_Logo.svg",
+    shortcut: "/images/logo/Depels_Food_Logo.svg",
+    apple: "/images/logo/Depels_Food_Logo.svg",
   },
   keywords: [
     "Depel's Food Enterprise",
