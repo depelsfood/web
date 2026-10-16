@@ -10,6 +10,7 @@ export const productCatalog: ProductInfo[] = [
   ] },
   { slug: "baby-special-pap", name: "Baby Special Pap", type: "Gentle family care", description: "A pap option for families caring for little ones.", image: productImage("baby-special-pap.webp"), detail: "A pap option for families caring for little ones. Always check the pack ingredients and age guidance before feeding.", variants: [
     { id: "regular-500g", label: "Regular Pap", weight: "500g", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Baby Special Pap · 500g" },
+    { id: "regular-550g", label: "Regular Pap", weight: "550g", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Baby Special Pap · 550g" },
     { id: "regular-1kg", label: "Regular Pap", weight: "1kg", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Baby Special Pap · 1kg" },
     { id: "powder-500g", label: "Pap Powder", weight: "500g", image: productImage("baby-special-pap-powder.webp"), ingredientsImage: productImage("baby-special-pap-powder-ingredients.webp"), description: "Baby Special Pap Powder · 500g" },
     { id: "powder-1kg", label: "Pap Powder", weight: "1kg", image: productImage("baby-special-pap-powder.webp"), ingredientsImage: productImage("baby-special-pap-powder-ingredients.webp"), description: "Baby Special Pap Powder · 1kg" },
