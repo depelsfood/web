@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
 
 export const metadata: Metadata = { title: "About Us", description: "Learn about Depel's Food Enterprise, a Nigerian food business bringing quality food products to homes, families and businesses." };
 
