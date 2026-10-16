@@ -2,7 +2,6 @@ import FoodMomentSlider from "../components/FoodMomentSlider";
 import ProductOrderSection from "../components/ProductOrderSection";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-import { productCatalog } from "../lib/product-catalog";
 
 const benefits = [
   ["hygienically-processed.svg", "Hygienically Processed", "Produced under clean and safe conditions."],
