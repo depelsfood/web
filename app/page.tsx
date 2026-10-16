@@ -1,5 +1,7 @@
 import FoodMomentSlider from "@/components/FoodMomentSlider";
 import ProductOrderSection from "@/components/ProductOrderSection";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const benefits = [
   ["🌾", "Hygienically Processed", "Produced under clean and safe conditions."],
@@ -13,7 +15,7 @@ const benefits = [
 export default function Home() {
   return (
     <main>
-      <header className="absolute inset-x-0 top-0 z-20"><div className="container flex h-20 items-center justify-between"><a href="#" className="text-xl font-extrabold tracking-tight text-white">Depel&apos;s <span className="text-[var(--gold)]">Food Enterprise</span></a><nav className="hidden items-center gap-8 text-sm font-semibold text-white/90 md:flex"><a href="#products">Products</a><a href="#about">About</a><a href="#business">For Business</a><a href="#contact">Contact</a></nav><a href="#products" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[var(--green-dark)] shadow-lg">Order Now</a></div></header>
+      <SiteHeader />
 
       <section className="relative min-h-[720px] overflow-hidden bg-[var(--green-dark)]"><div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/images/hero/hero-family-kitchen.webp)" }} /><div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,47,24,.94),rgba(8,47,24,.72)_48%,rgba(8,47,24,.2))]" /><div className="absolute -right-28 top-28 h-[500px] w-[500px] rounded-full border border-white/10" /><div className="container relative flex min-h-[720px] items-center pt-24"><div className="max-w-2xl text-white"><p className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em]">Quality food for everyday life</p><h1 className="font-[Montserrat] text-5xl font-extrabold leading-[.98] tracking-[-.04em] sm:text-6xl lg:text-[84px]">Good Food<br /><span className="text-[var(--gold)]">Gives More.</span></h1><p className="mt-7 max-w-xl text-base leading-7 text-white/80 sm:text-lg">From nourishing breakfasts to delicious everyday meals, Depel&apos;s brings carefully selected food products into the moments that matter most — at home, with family, and around the table.</p><div className="mt-9"><a href="#products" className="inline-flex rounded-full bg-[var(--gold)] px-7 py-4 text-sm font-extrabold text-white shadow-xl">Explore Our Products <span className="ml-3 text-lg">→</span></a></div></div></div></section>
 
@@ -29,7 +31,7 @@ export default function Home() {
 
       <section className="bg-[var(--cream)] py-24"><div className="container text-center"><p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold)]">A little reminder</p><h2 className="mx-auto mt-4 max-w-3xl font-[Montserrat] text-4xl font-extrabold leading-tight text-[var(--green-dark)] sm:text-5xl">When the food is good, the moment becomes more.</h2><p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-black/60">Breakfast becomes family time. Ingredients become a better meal. A good product becomes a better business.</p><a href="#products" className="mt-8 inline-flex rounded-full bg-[var(--green)] px-7 py-4 text-sm font-extrabold text-white">Find Your Products →</a></div></section>
 
-      <footer id="contact" className="bg-[#082f18] py-14 text-white"><div className="container grid gap-10 md:grid-cols-3"><div><p className="text-xl font-extrabold">Depel&apos;s Food Enterprise</p><p className="mt-3 max-w-sm text-sm leading-6 text-white/55">Quality food products for everyday life, families and businesses.</p></div><div><p className="text-sm font-bold uppercase tracking-wider text-[var(--gold)]">Contact</p><a href="https://wa.me/2348162007086" target="_blank" rel="noreferrer" className="mt-3 block text-sm text-white/70 transition hover:text-[var(--gold)]">+234 816 200 7086 · WhatsApp</a><a href="mailto:executive@depelsfood.com" className="mt-2 block text-sm text-white/70 transition hover:text-[var(--gold)]">executive@depelsfood.com</a><p className="mt-2 text-sm leading-6 text-white/70">EC13FA, Oke Itunu, Ilaje,<br />Ilesa, Osun State, Nigeria</p><p className="mt-2 text-xs text-white/40">CAC: 9071850 · TIN: 33788850-0001</p></div><div><p className="text-sm font-bold uppercase tracking-wider text-[var(--gold)]">Quick links</p><div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70"><a href="#">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#business">For Business</a></div></div></div><div className="container mt-12 border-t border-white/10 pt-6 text-xs text-white/40">© 2026 Depel&apos;s Food Enterprise. All Rights Reserved.</div></footer>
+      <div id="contact"><SiteFooter /></div>
     </main>
   );
 }
