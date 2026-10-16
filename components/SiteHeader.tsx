@@ -14,14 +14,14 @@ export default function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="container flex min-h-20 items-center justify-between gap-4">
-        <a href="/" aria-label="Depel's Food Enterprise home" className="text-lg font-extrabold tracking-tight text-white sm:text-xl">
+        <a href="/" aria-label="Depel's Food Enterprise home" className="max-w-[48vw] text-base font-extrabold tracking-tight text-white sm:max-w-none sm:text-xl">
           Depel&apos;s <span className="text-[var(--gold)]">Food Enterprise</span>
         </a>
         <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm font-semibold text-white/90 md:flex">
           {links.map((link) => <a key={link.href} href={link.href} className="transition hover:text-[var(--gold)]">{link.label}</a>)}
         </nav>
         <div className="flex items-center gap-2">
-          <a href="/products" className="rounded-full bg-white px-4 py-2.5 text-xs font-bold text-[var(--green-dark)] shadow-lg sm:px-5 sm:text-sm">Explore Products</a>
+          <a href="/products" className="whitespace-nowrap rounded-full bg-white px-3 py-2.5 text-[11px] font-bold text-[var(--green-dark)] shadow-lg sm:px-5 sm:text-sm">Explore Products</a>
           <button type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-xl text-white md:hidden">{open ? "×" : "☰"}</button>
         </div>
       </div>
