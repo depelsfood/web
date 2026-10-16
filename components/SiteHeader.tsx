@@ -14,8 +14,17 @@ export default function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="container flex min-h-20 items-center justify-between gap-4">
-        <a href="/" aria-label="Depel's Food Enterprise home" className="max-w-[48vw] text-base font-extrabold tracking-tight text-white sm:max-w-none sm:text-xl">
-          Depel&apos;s <span className="text-[var(--gold)]">Food Enterprise</span>
+        <a href="/" aria-label="Depel's Food Enterprise home" className="flex min-w-0 items-center">
+          <img
+            src="/images/brand/depels-food-logo.svg"
+            alt="Depel's Food Enterprise"
+            className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
+            width="56"
+            height="56"
+          />
+          <span className="ml-2 hidden text-base font-extrabold leading-tight tracking-tight text-white sm:block sm:text-lg">
+            Depel&apos;s<br /><span className="text-[var(--gold)]">Food Enterprise</span>
+          </span>
         </a>
         <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm font-semibold text-white/90 md:flex">
           {links.map((link) => <a key={link.href} href={link.href} className="transition hover:text-[var(--gold)]">{link.label}</a>)}
