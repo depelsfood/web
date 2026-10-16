@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
-import ProductOrderSection from "@/components/ProductOrderSection";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
+import ProductOrderSection from "../../components/ProductOrderSection";
 
 export const metadata: Metadata = {
   title: "Our Products",
