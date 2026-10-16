@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
 
 export const metadata: Metadata = { title: "Business & Bulk Supply", description: "Contact Depel's Food Enterprise about food product supply for retailers, food vendors, caterers, hospitality businesses and distributors in Nigeria." };
 
