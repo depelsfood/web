@@ -1,7 +1,7 @@
-import FoodMomentSlider from "@/components/FoodMomentSlider";
-import ProductOrderSection from "@/components/ProductOrderSection";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import FoodMomentSlider from "../components/FoodMomentSlider";
+import ProductOrderSection from "../components/ProductOrderSection";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
 
 const benefits = [
   ["🌾", "Hygienically Processed", "Produced under clean and safe conditions."],
