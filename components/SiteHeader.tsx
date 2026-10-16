@@ -16,7 +16,7 @@ export default function SiteHeader() {
       <div className="container flex min-h-20 items-center justify-between gap-4">
         <a href="/" aria-label="Depel's Food Enterprise home" className="flex min-w-0 items-center">
           <img
-            src="/images/brand/depels-food-logo.svg"
+            src="/images/logo/Depels_Food_Logo.svg"
             alt="Depel's Food Enterprise"
             className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
             width="56"
