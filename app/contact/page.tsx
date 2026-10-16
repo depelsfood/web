@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
 
 export const metadata: Metadata = { title: "Contact Us", description: "Contact Depel's Food Enterprise in Ilesa, Osun State, Nigeria, for product orders and business supply enquiries." };
 
