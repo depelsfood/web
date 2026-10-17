@@ -8,7 +8,7 @@ const packSizes = ["250g", "500g", "550g", "1kg", "2kg", "4kg", "Bulk order enqu
 
 export default function ProductDetailClient({ product }: { product: ProductInfo }) {
   const [variantId, setVariantId] = useState(product.variants[0]?.id ?? "");
-  const [packSize, setPackSize] = useState(product.variants[0]?.weight ?? "500g");
+  const [packSize, setPackSize] = useState(product.slug.includes("pap") ? (product.variants[0]?.weight ?? "500g") : "Pack size to be confirmed");
   const [quantity, setQuantity] = useState(1);
   const [customerName, setCustomerName] = useState("");
   const variant = useMemo(() => product.variants.find((item) => item.id === variantId) ?? product.variants[0], [product.variants, variantId]);
