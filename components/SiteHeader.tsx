@@ -1,43 +1,11 @@
 "use client";
-
 import { useState } from "react";
-
-const links = [
-  { href: "/products", label: "Products" },
-  { href: "/about", label: "About" },
-  { href: "/business-supply", label: "For Business" },
-  { href: "/contact", label: "Contact" },
-];
-
+const links = [{href:"/products",label:"Products"},{href:"/about",label:"About"},{href:"/business-supply",label:"For Business"},{href:"/contact",label:"Contact"}];
 export default function SiteHeader() {
-  const [open, setOpen] = useState(false);
-  return (
-    <header className="absolute inset-x-0 top-0 z-30">
-      <div className="container flex min-h-20 items-center justify-between gap-4">
-        <a href="/" aria-label="Depel's Food Enterprise home" className="flex min-w-0 items-center">
-          <img
-            src="/images/logo/Depels_Food_Logo.svg"
-            alt="Depel's Food Enterprise"
-            className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
-            width="56"
-            height="56"
-          />
-          <span className="ml-2 hidden text-base font-extrabold leading-tight tracking-tight text-white sm:block sm:text-lg">
-            Depel&apos;s<br /><span className="text-[var(--gold)]">Food Enterprise</span>
-          </span>
-        </a>
-        <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm font-semibold text-white/90 md:flex">
-          {links.map((link) => <a key={link.href} href={link.href} className="transition hover:text-[var(--gold)]">{link.label}</a>)}
-        </nav>
-        <div className="flex items-center gap-2">
-          <a href="/products" className="whitespace-nowrap rounded-full bg-white px-3 py-2.5 text-[11px] font-bold text-[var(--green-dark)] shadow-lg sm:px-5 sm:text-sm">Explore Products</a>
-          <button type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-xl text-white md:hidden">{open ? "×" : "☰"}</button>
-        </div>
-      </div>
-      {open && <nav aria-label="Mobile navigation" className="mx-4 rounded-2xl border border-white/10 bg-[#082f18]/95 p-3 text-white shadow-xl backdrop-blur md:hidden">
-        {links.map((link) => <a key={link.href} href={link.href} onClick={() => setOpen(false)} className="block rounded-xl px-4 py-3 text-sm font-semibold hover:bg-white/10">{link.label}</a>)}
-        <a href="/contact" onClick={() => setOpen(false)} className="mt-2 block rounded-xl bg-[var(--gold)] px-4 py-3 text-sm font-bold text-white">Talk to Depel&apos;s</a>
-      </nav>}
-    </header>
-  );
+ const [open,setOpen]=useState(false);
+ return <header className="absolute inset-x-0 top-0 z-30"><div className="container flex min-h-20 items-center justify-between gap-3">
+  <a href="/" aria-label="Depel's Food Enterprise home" className="flex min-w-0 items-center"><img src="/images/logo/Depels_Food_Logo.svg" alt="Depel's Food Enterprise" className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14" width="56" height="56"/><span className="ml-2 hidden text-base font-extrabold leading-tight tracking-tight text-white sm:block sm:text-lg">Depel&apos;s<br/><span className="text-[var(--gold)]">Food Enterprise</span></span></a>
+  <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm font-semibold text-white/90 md:flex">{links.map(link=><a key={link.href} href={link.href} className="transition hover:text-[var(--gold)]">{link.label}</a>)}</nav>
+  <div className="flex items-center gap-2"><a href="/cart" className="whitespace-nowrap rounded-full border border-white/40 px-3 py-2.5 text-[11px] font-bold text-white transition hover:bg-white/10 sm:px-4 sm:text-sm">Cart 🛒</a><a href="/products" className="whitespace-nowrap rounded-full bg-white px-3 py-2.5 text-[11px] font-bold text-[var(--green-dark)] shadow-lg sm:px-5 sm:text-sm">Explore Products</a><button type="button" aria-label={open?"Close menu":"Open menu"} aria-expanded={open} onClick={()=>setOpen(!open)} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-xl text-white md:hidden">{open?"×":"☰"}</button></div>
+ </div>{open&&<nav aria-label="Mobile navigation" className="mx-4 rounded-2xl border border-white/10 bg-[#082f18]/95 p-3 text-white shadow-xl backdrop-blur md:hidden">{links.map(link=><a key={link.href} href={link.href} onClick={()=>setOpen(false)} className="block rounded-xl px-4 py-3 text-sm font-semibold hover:bg-white/10">{link.label}</a>)}<a href="/cart" onClick={()=>setOpen(false)} className="block rounded-xl px-4 py-3 text-sm font-semibold hover:bg-white/10">Shopping Cart</a><a href="/contact" onClick={()=>setOpen(false)} className="mt-2 block rounded-xl bg-[var(--gold)] px-4 py-3 text-sm font-bold text-white">Talk to Depel&apos;s</a></nav>}</header>;
 }
