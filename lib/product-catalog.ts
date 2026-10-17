@@ -1,88 +1,15 @@
 export type ProductVariant = { id: string; label: string; weight: string; image: string; ingredientsImage?: string; description: string };
-export type ProductInfo = { slug: string; name: string; type: string; description: string; image: string; detail: string; variants: ProductVariant[]; note?: string };
+export type ProductInfo = { slug: string; name: string; type: string; description: string; image: string; detail: string; variants: ProductVariant[]; prices: Record<string, number>; note?: string };
 const productImage = (name: string) => `/images/products/${name}`;
 
 export const productCatalog: ProductInfo[] = [
-  {
-    slug: "mix-grain-pap",
-    name: "Mix Grain Pap",
-    type: "Family favourite",
-    description: "A comforting grain blend for family breakfasts and everyday nourishment.",
-    image: productImage("mix-grain-pap.webp"),
-    detail: "A versatile pap option for breakfast and everyday family routines. Select a listed pack size and ask our team to confirm availability and price.",
-    variants: [
-      { id: "regular-500g", label: "Regular Pap", weight: "500g", image: productImage("mix-grain-pap.webp"), ingredientsImage: productImage("mix-grain-pap-ingredients.webp"), description: "Regular Mix Grain Pap · 500g" },
-      { id: "regular-1kg", label: "Regular Pap", weight: "1kg", image: productImage("mix-grain-pap.webp"), ingredientsImage: productImage("mix-grain-pap-ingredients.webp"), description: "Regular Mix Grain Pap · 1kg" },
-    ],
-  },
-  {
-    slug: "mix-grain-pap-powder",
-    name: "Mix Grain Pap Powder",
-    type: "Family favourite · Powder",
-    description: "Mix Grain Pap in powder form, with its own product page and ordering options.",
-    image: productImage("mix-grain-pap-powder.webp"),
-    detail: "Mix Grain Pap Powder for everyday food routines. Select a listed pack size; availability and pricing are confirmed by our team.",
-    variants: [
-      { id: "powder-500g", label: "Pap Powder", weight: "500g", image: productImage("mix-grain-pap-powder.webp"), ingredientsImage: productImage("mix-grain-pap-powder-ingredients.webp"), description: "Mix Grain Pap Powder · 500g" },
-      { id: "powder-1kg", label: "Pap Powder", weight: "1kg", image: productImage("mix-grain-pap-powder.webp"), ingredientsImage: productImage("mix-grain-pap-powder-ingredients.webp"), description: "Mix Grain Pap Powder · 1kg" },
-    ],
-  },
-  {
-    slug: "baby-special-pap",
-    name: "Baby Special Pap",
-    type: "Gentle family care",
-    description: "A pap option for families caring for little ones.",
-    image: productImage("baby-special-pap.webp"),
-    detail: "A pap option for families caring for little ones. Always check the pack ingredients and age guidance before feeding.",
-    variants: [
-      { id: "regular-500g", label: "Regular Pap", weight: "500g", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Baby Special Pap · 500g" },
-      { id: "regular-550g", label: "Regular Pap", weight: "550g", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Baby Special Pap · 550g" },
-      { id: "regular-1kg", label: "Regular Pap", weight: "1kg", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Baby Special Pap · 1kg" },
-    ],
-  },
-  {
-    slug: "baby-special-pap-powder",
-    name: "Baby Special Pap Powder",
-    type: "Gentle family care · Powder",
-    description: "Baby Special Pap Powder listed separately for easier browsing and ordering.",
-    image: productImage("baby-special-pap-powder.webp"),
-    detail: "Baby Special Pap Powder for families caring for little ones. Always check the pack ingredients and age guidance before feeding; availability and pricing are confirmed by our team.",
-    variants: [
-      { id: "powder-500g", label: "Pap Powder", weight: "500g", image: productImage("baby-special-pap-powder.webp"), ingredientsImage: productImage("baby-special-pap-powder-ingredients.webp"), description: "Baby Special Pap Powder · 500g" },
-      { id: "powder-1kg", label: "Pap Powder", weight: "1kg", image: productImage("baby-special-pap-powder.webp"), ingredientsImage: productImage("baby-special-pap-powder-ingredients.webp"), description: "Baby Special Pap Powder · 1kg" },
-    ],
-  },
-  {
-    slug: "beans-powder",
-    name: "Beans Powder",
-    type: "Kitchen essential",
-    description: "A convenient pantry staple for preparing akara, moimoi and other bean-based meals.",
-    image: productImage("beans.webp"),
-    detail: "A convenient pantry staple for preparing akara, moimoi and other bean-based meals. Ask our team which pack sizes are currently available.",
-    variants: [{ id: "standard", label: "Beans Powder", weight: "Pack size by request", image: productImage("beans.webp"), description: "Beans Powder" }],
-  },
-  {
-    slug: "natural-honey",
-    name: "Natural Honey",
-    type: "A breakfast companion",
-    description: "A naturally sweet pantry companion for pap, breakfast and everyday recipes.",
-    image: productImage("natural-honey.webp"),
-    detail: "A naturally sweet pantry companion for pap, breakfast and everyday recipes. Ask our team which pack sizes are currently available.",
-    note: "Do not give honey to children under 12 months.",
-    variants: [{ id: "standard", label: "Natural Honey", weight: "Pack size by request", image: productImage("natural-honey.webp"), description: "Natural Honey" }],
-  },
-  {
-    slug: "soya-mix-powder",
-    name: "Soya Mix Powder",
-    type: "Plant-based variety",
-    description: "A versatile soya blend for adding more variety to everyday food routines.",
-    image: productImage("soya.webp"),
-    detail: "A versatile soya blend for adding more variety to everyday food routines. Check the product packaging for ingredients and allergen information, and ask our team about available pack sizes.",
-    note: "Contains soya. Check the ingredient label for allergen information.",
-    variants: [{ id: "standard", label: "Soya Mix Powder", weight: "Pack size by request", image: productImage("soya.webp"), ingredientsImage: productImage("soya-ingredients.webp"), description: "Soya Mix Powder" }],
-  },
+  { slug: "mix-grain-pap", name: "Mix Grain Pap", type: "Fresh", description: "A comforting grain blend for family breakfasts and everyday nourishment.", image: productImage("mix-grain-pap.webp"), detail: "Fresh Mix Grain Pap for family breakfasts and everyday routines.", prices: { "500g": 1300, "1kg": 2500, "2kg": 5000, "4kg": 9500 }, variants: [{ id: "fresh", label: "Fresh", weight: "500g", image: productImage("mix-grain-pap.webp"), ingredientsImage: productImage("mix-grain-pap-ingredients.webp"), description: "Fresh Mix Grain Pap" }] },
+  { slug: "mix-grain-pap-powder", name: "Mix Grain Pap Powder", type: "Powder", description: "Mix Grain Pap in powder form, listed separately for easy ordering.", image: productImage("mix-grain-pap-powder.webp"), detail: "Mix Grain Pap Powder for everyday food routines.", prices: { "250g": 1500, "500g": 3000, "1kg": 6000, "2kg": 11500 }, variants: [{ id: "powder", label: "Powder", weight: "250g", image: productImage("mix-grain-pap-powder.webp"), ingredientsImage: productImage("mix-grain-pap-powder-ingredients.webp"), description: "Mix Grain Pap Powder" }] },
+  { slug: "baby-special-pap", name: "Baby Special Pap", type: "Fresh", description: "A pap option for families caring for little ones.", image: productImage("baby-special-pap.webp"), detail: "Fresh Baby Special Pap. Always check pack ingredients and age guidance before feeding.", prices: { "500g": 1800, "1kg": 3500, "2kg": 7000, "4kg": 13500 }, variants: [{ id: "fresh", label: "Fresh", weight: "500g", image: productImage("baby-special-pap.webp"), ingredientsImage: productImage("baby-special-pap-ingredients.webp"), description: "Fresh Baby Special Pap" }] },
+  { slug: "baby-special-pap-powder", name: "Baby Special Pap Powder", type: "Powder", description: "Baby Special Pap Powder listed separately for easier browsing and ordering.", image: productImage("baby-special-pap-powder.webp"), detail: "Baby Special Pap Powder. Always check the pack ingredients and age guidance before feeding.", prices: { "250g": 2000, "500g": 4000, "1kg": 8000, "2kg": 15500 }, variants: [{ id: "powder", label: "Powder", weight: "250g", image: productImage("baby-special-pap-powder.webp"), ingredientsImage: productImage("baby-special-pap-powder-ingredients.webp"), description: "Baby Special Pap Powder" }] },
+  { slug: "beans-powder", name: "Beans Powder", type: "Kitchen essential", description: "A convenient pantry staple for akara, moimoi and other bean-based meals.", image: productImage("beans.webp"), detail: "Beans Powder for everyday cooking.", prices: { "500g": 2000, "1kg": 4000, "2kg": 7500 }, variants: [{ id: "standard", label: "Beans Powder", weight: "500g", image: productImage("beans.webp"), description: "Beans Powder" }] },
+  { slug: "natural-honey", name: "Pure Honey", type: "A breakfast companion", description: "A naturally sweet companion for breakfast and everyday recipes.", image: productImage("natural-honey.webp"), detail: "Pure Honey for breakfast and everyday recipes.", note: "Do not give honey to children under 12 months.", prices: { "25cl": 2500, "35cl": 3500, "50cl": 5000, "1litre": 8000, "5litre": 35000 }, variants: [{ id: "standard", label: "Pure Honey", weight: "25cl", image: productImage("natural-honey.webp"), description: "Pure Honey" }] },
+  { slug: "soya-mix-powder", name: "Soya Mix Powder", type: "Plant-based variety", description: "A versatile soya blend for everyday food routines.", image: productImage("soya.webp"), detail: "Soya Mix Powder for adding variety to everyday food routines.", note: "Contains soya. Check the ingredient label for allergen information.", prices: { "125g": 1000, "250g": 2000, "500g": 4000, "1kg": 7500 }, variants: [{ id: "standard", label: "Soya Mix Powder", weight: "125g", image: productImage("soya.webp"), ingredientsImage: productImage("soya-ingredients.webp"), description: "Soya Mix Powder" }] },
 ];
 
-export function getProduct(slug: string) {
-  return productCatalog.find((product) => product.slug === slug);
-}
+export function getProduct(slug: string) { return productCatalog.find((product) => product.slug === slug); }
