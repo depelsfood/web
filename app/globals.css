@@ -18,6 +18,26 @@ a { color: inherit; text-decoration: none; }
 
 .container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 
+@keyframes page-intro {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes moment-enter {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.page-intro { animation: page-intro .75s cubic-bezier(.2,.7,.2,1) both; }
+.moment-copy { animation: moment-enter .55s ease both; }
+.product-card { animation: page-intro .6s cubic-bezier(.2,.7,.2,1) both; }
+.button-motion { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease; }
+.button-motion:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgb(11 84 40 / 16%); }
+.button-motion:active { transform: translateY(0) scale(.98); }
+a.rounded-full, button.rounded-full { transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, background-color .2s ease; }
+a.rounded-full:hover, button.rounded-full:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgb(11 84 40 / 16%); }
+a.rounded-full:active, button.rounded-full:active { transform: translateY(0) scale(.985); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
 @media (max-width: 640px) {
   .container { width: min(100% - 28px, 1180px); }
 }
