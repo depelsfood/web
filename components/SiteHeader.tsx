@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-const links = [{href:"/products",label:"Products"},{href:"/about",label:"About"},{href:"/business-supply",label:"For Business"},{href:"/contact",label:"Contact"}];
+const links = [{href:"/products",label:"Products"},{href:"/how-to-order",label:"How to Order"},{href:"/about",label:"About"},{href:"/business-supply",label:"For Business"},{href:"/contact",label:"Contact"}];
 export default function SiteHeader() {
  const [open,setOpen]=useState(false);
  return <header className="absolute inset-x-0 top-0 z-30"><div className="container flex min-h-20 items-center justify-between gap-3">
