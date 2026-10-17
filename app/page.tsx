@@ -28,7 +28,7 @@ const steps = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="page-intro">
       <SiteHeader />
 
       {/* Hero */}
@@ -40,7 +40,7 @@ export default function Home() {
             <p className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em]">Quality food for everyday life</p>
             <h1 className="font-[Montserrat] text-5xl font-extrabold leading-[.98] tracking-[-.04em] sm:text-6xl lg:text-[78px]">Quality Food Products,<br /><span className="text-[var(--gold)]">Processed with Care.</span></h1>
             <p className="mt-7 max-w-xl text-base leading-7 text-white/85 sm:text-lg">From nutritious Pap to quality beans, honey, soya and more, Depel&apos;s Food Enterprise provides carefully handled food products for homes, families, retailers and businesses.</p>
-            <div className="mt-9"><a href="#categories" className="inline-flex rounded-full bg-[var(--gold)] px-7 py-4 text-sm font-extrabold text-white shadow-xl transition hover:brightness-105">Shop Our Products <span className="ml-3 text-lg">→</span></a></div>
+            <div className="mt-9"><a href="#categories" className="inline-flex rounded-full bg-[var(--gold)] px-7 py-4 text-sm font-extrabold text-white shadow-xl transition hover:brightness-105">Explore Our Products <span className="ml-3 text-lg">→</span></a></div>
           </div>
         </div>
       </section>
