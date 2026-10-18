@@ -18,7 +18,7 @@ export default function FoodMomentSlider() {
 
   useEffect(() => {
     if (paused) return;
-    const timer = window.setInterval(() => setActive((index) => (index + 1) % moments.length), 5000);
+    const timer = window.setInterval(() => setActive((index) => (index + 1) % moments.length), 10000);
     return () => window.clearInterval(timer);
   }, [paused]);
 
@@ -56,7 +56,7 @@ export default function FoodMomentSlider() {
             <button onClick={() => setActive((active + 1) % moments.length)} aria-label="Next slide" className="button-motion flex h-9 w-9 items-center justify-center rounded-full bg-[var(--green)] text-white">→</button>
           </div>
         </div>
-        <p className="mt-3 text-xs text-black/45">Slides advance automatically every five seconds. Hover or focus here to pause.</p>
+        <p className="mt-3 text-xs text-black/45">Slides advance automatically every ten seconds. Hover or focus here to pause.</p>
       </div>
     </section>
   );
