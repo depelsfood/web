@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import FloatingSocialLinks from "../components/FloatingSocialLinks";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -44,7 +45,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-NG">
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingSocialLinks />
+      </body>
     </html>
   );
 }
